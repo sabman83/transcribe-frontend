@@ -4,35 +4,37 @@ class Landing extends Component {
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
-          <div className="col s12 center-align">
+          <div className="text-center">
             <h4>
               <b>Build</b> a login/auth app with the{" "}
               <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
               scratch
             </h4>
-            <p className="flow-text grey-text text-darken-1">
+            <p className="">
               Create a (minimal) full-stack app with user authentication via
               passport and JWTs
             </p>
             <br />
             <a
               style={{
+                color: "white",
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px"
               }}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              className="btn btn-primary"
             >
               Register
             </a>
             <a
               style={{
+                color: "white",
                 marginLeft: "2rem",
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px"
               }}
-              className="btn btn-large waves-effect white hoverable black-text"
+              className="btn btn-primary"
             >
               Log In
             </a>
