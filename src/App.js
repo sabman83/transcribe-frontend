@@ -19,6 +19,9 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Private from "./components/private/Private";
 import Dashboard from "./components/dashboard/Dashboard";
+import Add from "./components/audio/Add";
+
+
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -52,6 +55,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Switch>
               <Private exact path="/dashboard" component={Dashboard} />
+              <Private exact path="/add" component={Add} />
             </Switch>
         </div>
 
