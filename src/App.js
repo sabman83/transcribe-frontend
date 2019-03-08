@@ -20,6 +20,7 @@ import Login from "./components/auth/Login";
 import Private from "./components/private/Private";
 import Dashboard from "./components/dashboard/Dashboard";
 import Add from "./components/audio/Add";
+import AudioList from "./components/audio/List";
 
 
 
@@ -55,6 +56,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Switch>
               <Private exact path="/dashboard" component={Dashboard} />
+              <Private exact path="/list" component={AudioList} />
               <Private exact path="/add" component={Add} />
             </Switch>
         </div>
