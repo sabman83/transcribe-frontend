@@ -13,10 +13,6 @@ export default class AddAudio extends Component {
       name: '',
       file: null
     }
-
-    //thiuuthiuuthiuuthis.handleNameChange.bind(this);
-    //this.handleFileChange.bind(this);
-    //this.handleSubmit.bind(this);
   }
 
   handleNameChange = (e) => {
@@ -48,16 +44,10 @@ export default class AddAudio extends Component {
     data.append('descr', this.state.name);
 
     axios
-      .post(endpoint, data, {
-        onUploadProgress: ProgressEvent => {
-          this.setState({
-            loaded: (ProgressEvent.loaded / ProgressEvent.total) * 100,
-          })
-        },
-      })
-      .then(res => {
-        console.log(res.statusText)
-      });
+    .post(endpoint, data)
+    .then(res => {
+      console.log(res.statusText)
+    });
   }
 
   render() {
@@ -84,10 +74,8 @@ export default class AddAudio extends Component {
                 value="Upload"
                 className="btn btn-primary"
               />
-            <div> {Math.round(this.state.loaded, 2)} </div>
           </div>
         </form>
-        <button type="button" onClick={this.handleGetList}>Click Me!</button>
       </div>
     )
   }
